@@ -20,9 +20,9 @@ const BasketPage: FC<Props> = () => {
 
   const addToBasket = (product: ProductWithQuantity) => {
     if (product.quantity + 1 > MAX_PRODUCT_BASKET_LIMIT) {
-        return toast.error(`You can add up to ${MAX_PRODUCT_BASKET_LIMIT} of the same product!`, {
-            className: '!bg-red-500 !text-white',
-        });
+      return toast.error(`You can add up to ${MAX_PRODUCT_BASKET_LIMIT} of the same product!`, {
+        className: '!bg-red-500 !text-white',
+      });
     }
     dispatch(addBasket(product));
     toast.success(`${product.title} added to basket!`, {});
@@ -40,7 +40,8 @@ const BasketPage: FC<Props> = () => {
 
   return (
     <section className="app-container mt-12">
-      <div className="grid grid-cols-12 gap-5 xl:gap-10">
+      <h1 className="font-bold text-xl text-blue-500">My Basket</h1>
+      <div className="mt-5 grid grid-cols-12 gap-5 xl:gap-10">
         <div className="col-span-12 xl:col-span-8">
           <div className="flex flex-col gap-5">
             {basket.length === 0 && (
