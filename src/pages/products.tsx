@@ -7,15 +7,12 @@ import { RootState } from '@/stores';
 import { addBasket } from '@/stores/basket-slice';
 import { FC } from 'react';
 import useSWR from 'swr';
-import { axios } from '@/lib';
+import { fetcher } from '@/lib';
 
 type Props = {};
 
 const ProductsPage: FC<Props> = ({}) => {
-  const { data: products, isLoading: isProductsLoading } = useSWR<Product[]>('/products', async (url: string) => {
-    const { data } = await axios.get(url);
-    return data;
-  });
+  const { data: products, isLoading: isProductsLoading } = useSWR<Product[]>('/products', fetcher);
   const dispatch = useDispatch();
   const basket = useSelector((state: RootState) => state.basketStore.basket);
 
