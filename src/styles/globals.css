@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+
+html,
+body,
+#root {
+  @apply w-full h-full antialiased flex flex-col;
+}
+
+button[type] {
+  @apply cursor-pointer;
+}
+
+.app-container {
+  @apply max-w-[90%] px-5 xl:px-0 xl:max-w-6xl mx-auto w-full pb-6 lg:pb-8 xl:pb-10;
+}
