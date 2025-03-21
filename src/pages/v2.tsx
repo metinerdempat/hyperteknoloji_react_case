@@ -8,7 +8,7 @@ const Version2Page: FC<Props> = ({}) => {
       <a href="https://hyperteknoloji.com" title='Hyper Teknoloji'>
         <img src="/hyper_teknoloji_logo.webp" alt="Hyper Teknoloji Logo" width={200} height={80} />
       </a>
-      <h1 className="mt-6 text-3xl font-bold">Version 2 will be deployed on 23.03.2025</h1>
+      <h1 className="mt-6 text-3xl font-bold">Version 2 will be deployed on 22.03.2025</h1>
       <p className="mt-4">All my respect to the Hyper Teknoloji</p>
     </div>
   );
