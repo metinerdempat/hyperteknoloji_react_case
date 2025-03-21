@@ -17,8 +17,8 @@ const ROUTES = [
   {
     id: 4,
     title: 'Version 2 (22.03.2025)',
-    path: '/',
-    isExternal: true,
+    path: '/v2',
+    // isExternal: true,
   },
 ] as const;
 
