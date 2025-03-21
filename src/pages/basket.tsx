@@ -54,7 +54,7 @@ const BasketPage: FC<Props> = () => {
               basket.map((product, i) => (
                 <div
                   key={i}
-                  className="flex items-center justify-between bg-white p-4 shadow-md shadow-blue-50 rounded-md hover:shadow-blue-100 transition-all duration-150"
+                  className="flex flex-col xl:flex-row xl:items-center xl:justify-between bg-white p-4 shadow-md shadow-blue-50 rounded-md hover:shadow-blue-100 transition-all duration-150"
                 >
                   <div className="flex items-center gap-4">
                     <img src={product.image} alt={product.title} className="w-20 h-20 object-fill rounded-md" />
@@ -64,7 +64,7 @@ const BasketPage: FC<Props> = () => {
                       <p className="mt-1 text-sm font-bold">{moneyFormatter(product.price)}</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3">
+                  <div className="flex mt-5 xl:mt-0 items-center gap-3">
                     <div className="flex items-center">
                       <button
                         type="button"
@@ -98,7 +98,7 @@ const BasketPage: FC<Props> = () => {
           </div>
         </div>
 
-        <div className="col-span-12 xl:col-span-4 bg-white shadow-md p-4 rounded-md">
+        <div className="col-span-12 xl:col-span-4 flex flex-col bg-white shadow-md p-4 rounded-md">
           <h6 className="text-xl font-medium">Hyper Teknoloji Basket</h6>
           <div className="mt-3 flex flex-col gap-2 pl-2">
             {basket.map((product) => (
@@ -115,7 +115,7 @@ const BasketPage: FC<Props> = () => {
           {basket.length > 0 && (
             <AnimatedLink
               href="/checkout"
-              className="mt-5 inline-flex text-sm shadow-none"
+              className="mt-auto inline-flex text-sm shadow-none"
               text="Proceed to Checkout"
               rightIcon={<MoveRightIcon size={16} />}
             />
