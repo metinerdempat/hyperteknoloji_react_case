@@ -88,6 +88,7 @@ const MobileMenu: FC<Props> = ({ isMenuOpen, toggleMenu }) => {
             text={`Basket (${basketQuantity})`}
             href="/basket"
             leftIcon={<ShoppingCartIcon size={16} />}
+            onClick={toggleMenu}
           />
         </div>
       </div>
